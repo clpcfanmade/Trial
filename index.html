@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ファンメイド詳細サイト</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="main-content">
+
+    <section class="hero">
+
+        <video autoplay muted loop playsinline class="bg-video">
+            <source src="ame.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>Colorful peach FAN SITE</h1>
+            <p>ファンメイド制作詳細サイト</p>
+        </div>
+
+    </section>
+
+</div>
+
+<section class="detail fade">
+    <h2>PURPOSE</h2>
+    <p>
+        東京ドームを目標にするカラフルピーチ<br><br>
+        《からぴちを全国に広めたい》という沢山のぴちりすさんの活動を<br>
+        また広めたいというある1人の思いから<br>
+        このwebサイトを作りたいという行動に出ました。<br><br>
+        1人で運営する予定なので皆さんのご協力が必要です🥺<br>
+        詳細などはこの後に書いているので、興味をもってくださるとうれしいです！
+    </p>
+</section>
+
+<section class="detail fade">
+    <h2>DETAILS</h2>
+
+    <p>今掲載したいと考えている内容はこちらです</p>
+
+    <ul class="detail-list">
+        <li>皆さんが現在行っている活動など</li>
+        <li>FA</li>
+        <li>切り抜き動画のリンク</li>
+        <li>応援メッセージ</li>
+        
+    </ul>
+    <br>現在は試行期間になっていますが、協力してくださる方募集中です！<br>
+
+
+</section>
+
+<section class="detail fade">
+    <h2>CONTACT</h2>
+    <p>
+        当企画運営 『X @clpcfanmade』のDM、またはこのサイトのリンクを載せているリプ欄にて<br>
+        記載しても良い内容とSNSのアカウント名を書いて送ってください
+        </p>
+ <div class="box">
+            
+       <p>
+        例：FA<br>
+        【内容】FA
+        （FAの画像）、アカウント名
+
+    <br><br>例：切り抜き<br>
+    【切り抜き】（動画のリンク）
+    動画のタイトル、アカウント名
+    <br><br>例：応援メッセージ<br>
+    （メッセージ）、アカウント名<BR>
+   
+        メッセージについては誰宛かわかるように、最初に○○へと書いてくださると助かります
+         <br><br>例：その他企画など<br>
+    応援広告○○で掲載する予定です！詳細は～～、アカウント名<br>
+    #○○で～～やっています！参加ぜひ！、アカウント名
+        <br><br><br><br>
+         なにかわからないことがあれば、気軽にご相談ください！
+        </p>
+       </div>
+    
+    <p><br>こちらの事情でこの企画自体を中止させることがあります。<br>
+        ご了承ください。
+        </p>
+</section>
+
+<section class="detail fade">
+    <h2>FINARRY</h2>
+    <p>こちらはカラフルピーチ公式様と一切関係がありません<br>
+        <br>くれぐれも迷惑をかけず、からぴちの目標達成に向けて応援していきましょう<br><br>
+    また、主の初めての企画でもあるのでぐだったりすることがあるかもしれません。<br>その時は優しく見守ってくださると幸いです<br><br>
+    私も皆さんの広報活動をお手伝いできるように私のペースではありますが、精一杯頑張っていきます。<br>
+    拡散はOKです！本人様に隠すつもりはないのでじゃんじゃんしていただけると喜びます
+        <br><br>最後までご覧いただきありがとうございました。<br>どなたでもご参加お待ちしております
+</p>
+
+
+<script>
+const fadeElements = document.querySelectorAll(".fade");
+
+function showFadeElements(){
+    fadeElements.forEach((element)=>{
+        const position = element.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if(position < windowHeight - 100){
+            element.classList.add("show");
+        }
+    });
+}
+
+window.addEventListener("scroll", showFadeElements);
+window.addEventListener("load", showFadeElements);
+</script>
+
+</body>
+</html>
