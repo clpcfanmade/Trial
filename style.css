@@ -213,7 +213,10 @@ button:hover{
 .detail-list li:last-child{
     border-bottom:none;
 }
-
+.detail-list li::before{
+    content:"♡ ";
+    color:#ff4fa3;
+}
 .detail-list li::after{
     content:" ♡";
     color:#ff4fa3;
