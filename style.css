@@ -307,3 +307,48 @@ button:hover{
     }
 
 }
+/* スマホ対応 */
+@media screen and (max-width:768px){
+
+    .detail{
+
+        width:95%;
+
+        padding:30px 15px;
+
+        box-sizing:border-box;
+    }
+
+    .detail h2{
+
+        font-size:28px;
+    }
+
+    .detail p{
+
+        font-size:15px;
+
+        line-height:2;
+
+        word-break:break-word;
+
+        overflow-wrap:anywhere;
+    }
+
+    .detail-list{
+
+        width:100%;
+
+        box-sizing:border-box;
+    }
+
+    .detail-list li{
+
+        font-size:15px;
+
+        word-break:break-word;
+
+        overflow-wrap:anywhere;
+    }
+
+}
