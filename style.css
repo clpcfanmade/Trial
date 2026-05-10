@@ -115,15 +115,15 @@ button:hover{
 
 .detail p{
     max-width:1200px;
-
     font-size:20px;
-
     line-height:2;
-
     overflow-wrap:anywhere;
-
     word-break:break-word;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
 }
+
 
 /* フェード */
 .fade{
@@ -176,11 +176,15 @@ button:hover{
 
 /* リスト */
 .detail-list{
+
     list-style:none;
 
     padding:30px;
 
     margin-top:30px;
+
+    margin-left:auto;
+    margin-right:auto;
 
     width:80%;
     max-width:700px;
@@ -194,10 +198,7 @@ button:hover{
     backdrop-filter:blur(10px);
 
     box-shadow:0 0 20px rgba(0,0,0,0.3);
-
-    box-sizing:border-box;
 }
-
 .detail-list li{
     padding:15px 0;
 
