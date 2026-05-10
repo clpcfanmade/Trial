@@ -6,35 +6,27 @@ body{
 }
 
 /* 最初の画面 */
-
 .hero{
-
     position:relative;
-
     height:100vh;
-
     overflow:hidden;
 
     display:flex;
-
     justify-content:center;
     align-items:center;
 
     text-align:center;
 }
 
-
 .hero h1{
     font-size:70px;
     letter-spacing:5px;
-
     animation:fade 2s;
 }
 
 .hero p{
     font-size:20px;
     margin-bottom:30px;
-
     animation:fade 3s;
 }
 
@@ -59,11 +51,6 @@ button:hover{
     background:#ff77bb;
 }
 
-.about{
-    padding:100px 20px;
-    text-align:center;
-}
-
 @keyframes fade{
     from{
         opacity:0;
@@ -75,67 +62,17 @@ button:hover{
         transform:translateY(0);
     }
 }
-.loading{
-    position:fixed;
-
-    top:0;
-    left:0;
-
-    width:100%;
-    height:100vh;
-
-    background:black;
-
-    display:flex;
-    flex-direction:column;
-
-    justify-content:center;
-    align-items:center;
-
-    z-index:999;
-}
-
-.loading h1{
-    font-size:60px;
-    margin-bottom:30px;
-}
 
 .main-content{
     display:block;
 }
+
+/* section */
 .detail{
-    min-height:100vh;
-    padding:100px 20px;
-    text-align:center;
-
-    background:#fff7fb;
-    color:#333;
-
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-}
-
-.detail h2{
-    font-size:50px;
-    margin-bottom:30px;
-    color:#ff4fa3;
-      border:3px solid #ff4fa3;
-
-    padding:15px 40px;
-
-    border-radius:50px;
-
-    background:rgba(255,255,255,0.1);
-
-    backdrop-filter:blur(5px);
-}
-
-.detail{
-
     width:80%;
     margin:100px auto;
+
+    min-height:100vh;
 
     padding:80px 30px;
 
@@ -152,62 +89,59 @@ button:hover{
     color:white;
 
     text-align:center;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
 }
 
-/* 最初隠す */
-/* 最初隠す */
-.fade{
+.detail h2{
+    font-size:50px;
+    margin-bottom:30px;
 
+    color:#ff4fa3;
+
+    border:3px solid #ff4fa3;
+
+    padding:15px 40px;
+
+    border-radius:50px;
+
+    background:rgba(255,255,255,0.1);
+
+    backdrop-filter:blur(5px);
+}
+
+.detail p{
+    max-width:1200px;
+
+    font-size:20px;
+
+    line-height:2;
+
+    overflow-wrap:anywhere;
+
+    word-break:break-word;
+}
+
+/* フェード */
+.fade{
     opacity:0;
 
     transform:translateY(80px);
 
-    transition: all 1.8s ease-out;
+    transition:all 1.8s ease-out;
 }
 
-/* 出てきた状態 */
 .fade.show{
-
     opacity:1;
 
     transform:translateY(0);
 }
-.detail p{
-    max-width:1200px;
-    font-size:20px;
-    line-height:1.8;
-}
-@media screen and (max-width: 768px){
 
-    .hero h1{
-        font-size:40px;
-    }
-
-    .detail h2{
-        font-size:30px;
-    }
-
-    .detail p{
-        font-size:16px;
-    }
-
-}
-.detail h1{
-    font-size:7vw;
-}
-.detail-list{
-    list-style:none;
-    padding:0;
-    font-size:20px;
-    line-height:2.2;
-}
-
-.detail-list li::before{
-    content:"♡ ";
-    color:#ff4fa3;
-}
+/* 背景動画 */
 .bg-video{
-
     position:absolute;
 
     top:0;
@@ -222,7 +156,6 @@ button:hover{
 }
 
 .overlay{
-
     position:absolute;
 
     top:0;
@@ -240,8 +173,9 @@ button:hover{
     position:relative;
     z-index:1;
 }
-.detail-list{
 
+/* リスト */
+.detail-list{
     list-style:none;
 
     padding:30px;
@@ -260,28 +194,36 @@ button:hover{
     backdrop-filter:blur(10px);
 
     box-shadow:0 0 20px rgba(0,0,0,0.3);
-}
-.detail-list li{
 
+    box-sizing:border-box;
+}
+
+.detail-list li{
     padding:15px 0;
 
     border-bottom:1px solid rgba(255,255,255,0.1);
 
     font-size:20px;
-}
-.detail-list li:last-child{
 
+    overflow-wrap:anywhere;
+
+    word-break:break-word;
+}
+
+.detail-list li:last-child{
     border-bottom:none;
 }
+
 .detail-list li::after{
-
     content:" ♡";
-
     color:#ff4fa3;
 }
-.box{
 
-    padding:30px;
+/* 囲み枠 */
+.box{
+    width:100%;
+
+    padding:20px;
 
     border-radius:20px;
 
@@ -290,65 +232,61 @@ button:hover{
     border:1px solid rgba(255,255,255,0.2);
 
     backdrop-filter:blur(10px);
+
+    box-sizing:border-box;
 }
-.detail p{
 
-    line-height:2;
-
-    word-break:keep-all;
+/* 全体 */
+*{
+    box-sizing:border-box;
 }
-@media screen and (max-width:768px){
 
-    .detail p{
-
-        font-size:15px;
-
-        line-height:2.2;
-    }
-
-}
 /* スマホ対応 */
 @media screen and (max-width:768px){
 
-    .detail{
+    .hero h1{
+        font-size:40px;
+    }
 
+    .hero p{
+        font-size:16px;
+    }
+
+    .detail{
         width:95%;
 
-        padding:30px 15px;
-
-        box-sizing:border-box;
+        padding:30px 10px;
     }
 
     .detail h2{
-
         font-size:28px;
     }
 
     .detail p{
-
         font-size:15px;
 
         line-height:2;
-
-        word-break:break-word;
-
-        overflow-wrap:anywhere;
     }
 
     .detail-list{
-
         width:100%;
 
-        box-sizing:border-box;
+        padding:20px 10px;
     }
 
     .detail-list li{
-
         font-size:15px;
-
-        word-break:break-word;
-
-        overflow-wrap:anywhere;
     }
 
+    .box{
+        width:100%;
+
+        padding:15px 10px;
+    }
+
+    .box p{
+        font-size:14px;
+
+        line-height:1.8;
+    }
 }
