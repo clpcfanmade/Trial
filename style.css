@@ -291,3 +291,19 @@ button:hover{
 
     backdrop-filter:blur(10px);
 }
+.detail p{
+
+    line-height:2;
+
+    word-break:keep-all;
+}
+@media screen and (max-width:768px){
+
+    .detail p{
+
+        font-size:15px;
+
+        line-height:2.2;
+    }
+
+}
